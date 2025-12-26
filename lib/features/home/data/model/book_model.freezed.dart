@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'book_response.dart';
+part of 'book_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,22 +13,22 @@ part of 'book_response.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$BookResponse {
+mixin _$BookModel {
 
 @JsonKey(name: "key") String? get key;@JsonKey(name: "name") String? get name;@JsonKey(name: "subject_type") String? get subjectType;@JsonKey(name: "solr_query") String? get solrQuery;@JsonKey(name: "work_count") int? get workCount;@JsonKey(name: "works") List<Work>? get works;
-/// Create a copy of BookResponse
+/// Create a copy of BookModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$BookResponseCopyWith<BookResponse> get copyWith => _$BookResponseCopyWithImpl<BookResponse>(this as BookResponse, _$identity);
+$BookModelCopyWith<BookModel> get copyWith => _$BookModelCopyWithImpl<BookModel>(this as BookModel, _$identity);
 
-  /// Serializes this BookResponse to a JSON map.
+  /// Serializes this BookModel to a JSON map.
   Map<String, dynamic> toJson();
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is BookResponse&&(identical(other.key, key) || other.key == key)&&(identical(other.name, name) || other.name == name)&&(identical(other.subjectType, subjectType) || other.subjectType == subjectType)&&(identical(other.solrQuery, solrQuery) || other.solrQuery == solrQuery)&&(identical(other.workCount, workCount) || other.workCount == workCount)&&const DeepCollectionEquality().equals(other.works, works));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is BookModel&&(identical(other.key, key) || other.key == key)&&(identical(other.name, name) || other.name == name)&&(identical(other.subjectType, subjectType) || other.subjectType == subjectType)&&(identical(other.solrQuery, solrQuery) || other.solrQuery == solrQuery)&&(identical(other.workCount, workCount) || other.workCount == workCount)&&const DeepCollectionEquality().equals(other.works, works));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -37,15 +37,15 @@ int get hashCode => Object.hash(runtimeType,key,name,subjectType,solrQuery,workC
 
 @override
 String toString() {
-  return 'BookResponse(key: $key, name: $name, subjectType: $subjectType, solrQuery: $solrQuery, workCount: $workCount, works: $works)';
+  return 'BookModel(key: $key, name: $name, subjectType: $subjectType, solrQuery: $solrQuery, workCount: $workCount, works: $works)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $BookResponseCopyWith<$Res>  {
-  factory $BookResponseCopyWith(BookResponse value, $Res Function(BookResponse) _then) = _$BookResponseCopyWithImpl;
+abstract mixin class $BookModelCopyWith<$Res>  {
+  factory $BookModelCopyWith(BookModel value, $Res Function(BookModel) _then) = _$BookModelCopyWithImpl;
 @useResult
 $Res call({
 @JsonKey(name: "key") String? key,@JsonKey(name: "name") String? name,@JsonKey(name: "subject_type") String? subjectType,@JsonKey(name: "solr_query") String? solrQuery,@JsonKey(name: "work_count") int? workCount,@JsonKey(name: "works") List<Work>? works
@@ -56,14 +56,14 @@ $Res call({
 
 }
 /// @nodoc
-class _$BookResponseCopyWithImpl<$Res>
-    implements $BookResponseCopyWith<$Res> {
-  _$BookResponseCopyWithImpl(this._self, this._then);
+class _$BookModelCopyWithImpl<$Res>
+    implements $BookModelCopyWith<$Res> {
+  _$BookModelCopyWithImpl(this._self, this._then);
 
-  final BookResponse _self;
-  final $Res Function(BookResponse) _then;
+  final BookModel _self;
+  final $Res Function(BookModel) _then;
 
-/// Create a copy of BookResponse
+/// Create a copy of BookModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? key = freezed,Object? name = freezed,Object? subjectType = freezed,Object? solrQuery = freezed,Object? workCount = freezed,Object? works = freezed,}) {
   return _then(_self.copyWith(
@@ -80,8 +80,8 @@ as List<Work>?,
 }
 
 
-/// Adds pattern-matching-related methods to [BookResponse].
-extension BookResponsePatterns on BookResponse {
+/// Adds pattern-matching-related methods to [BookModel].
+extension BookModelPatterns on BookModel {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -94,10 +94,10 @@ extension BookResponsePatterns on BookResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _BookResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _BookModel value)?  $default,{required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _BookResponse() when $default != null:
+case _BookModel() when $default != null:
 return $default(_that);case _:
   return orElse();
 
@@ -116,10 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _BookResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _BookModel value)  $default,){
 final _that = this;
 switch (_that) {
-case _BookResponse():
+case _BookModel():
 return $default(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -137,10 +137,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _BookResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _BookModel value)?  $default,){
 final _that = this;
 switch (_that) {
-case _BookResponse() when $default != null:
+case _BookModel() when $default != null:
 return $default(_that);case _:
   return null;
 
@@ -160,7 +160,7 @@ return $default(_that);case _:
 
 @optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: "key")  String? key, @JsonKey(name: "name")  String? name, @JsonKey(name: "subject_type")  String? subjectType, @JsonKey(name: "solr_query")  String? solrQuery, @JsonKey(name: "work_count")  int? workCount, @JsonKey(name: "works")  List<Work>? works)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _BookResponse() when $default != null:
+case _BookModel() when $default != null:
 return $default(_that.key,_that.name,_that.subjectType,_that.solrQuery,_that.workCount,_that.works);case _:
   return orElse();
 
@@ -181,7 +181,7 @@ return $default(_that.key,_that.name,_that.subjectType,_that.solrQuery,_that.wor
 
 @optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: "key")  String? key, @JsonKey(name: "name")  String? name, @JsonKey(name: "subject_type")  String? subjectType, @JsonKey(name: "solr_query")  String? solrQuery, @JsonKey(name: "work_count")  int? workCount, @JsonKey(name: "works")  List<Work>? works)  $default,) {final _that = this;
 switch (_that) {
-case _BookResponse():
+case _BookModel():
 return $default(_that.key,_that.name,_that.subjectType,_that.solrQuery,_that.workCount,_that.works);case _:
   throw StateError('Unexpected subclass');
 
@@ -201,7 +201,7 @@ return $default(_that.key,_that.name,_that.subjectType,_that.solrQuery,_that.wor
 
 @optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: "key")  String? key, @JsonKey(name: "name")  String? name, @JsonKey(name: "subject_type")  String? subjectType, @JsonKey(name: "solr_query")  String? solrQuery, @JsonKey(name: "work_count")  int? workCount, @JsonKey(name: "works")  List<Work>? works)?  $default,) {final _that = this;
 switch (_that) {
-case _BookResponse() when $default != null:
+case _BookModel() when $default != null:
 return $default(_that.key,_that.name,_that.subjectType,_that.solrQuery,_that.workCount,_that.works);case _:
   return null;
 
@@ -213,9 +213,9 @@ return $default(_that.key,_that.name,_that.subjectType,_that.solrQuery,_that.wor
 /// @nodoc
 @JsonSerializable()
 
-class _BookResponse implements BookResponse {
-  const _BookResponse({@JsonKey(name: "key") this.key, @JsonKey(name: "name") this.name, @JsonKey(name: "subject_type") this.subjectType, @JsonKey(name: "solr_query") this.solrQuery, @JsonKey(name: "work_count") this.workCount, @JsonKey(name: "works") final  List<Work>? works}): _works = works;
-  factory _BookResponse.fromJson(Map<String, dynamic> json) => _$BookResponseFromJson(json);
+class _BookModel implements BookModel {
+  const _BookModel({@JsonKey(name: "key") this.key, @JsonKey(name: "name") this.name, @JsonKey(name: "subject_type") this.subjectType, @JsonKey(name: "solr_query") this.solrQuery, @JsonKey(name: "work_count") this.workCount, @JsonKey(name: "works") final  List<Work>? works}): _works = works;
+  factory _BookModel.fromJson(Map<String, dynamic> json) => _$BookModelFromJson(json);
 
 @override@JsonKey(name: "key") final  String? key;
 @override@JsonKey(name: "name") final  String? name;
@@ -232,20 +232,20 @@ class _BookResponse implements BookResponse {
 }
 
 
-/// Create a copy of BookResponse
+/// Create a copy of BookModel
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$BookResponseCopyWith<_BookResponse> get copyWith => __$BookResponseCopyWithImpl<_BookResponse>(this, _$identity);
+_$BookModelCopyWith<_BookModel> get copyWith => __$BookModelCopyWithImpl<_BookModel>(this, _$identity);
 
 @override
 Map<String, dynamic> toJson() {
-  return _$BookResponseToJson(this, );
+  return _$BookModelToJson(this, );
 }
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BookResponse&&(identical(other.key, key) || other.key == key)&&(identical(other.name, name) || other.name == name)&&(identical(other.subjectType, subjectType) || other.subjectType == subjectType)&&(identical(other.solrQuery, solrQuery) || other.solrQuery == solrQuery)&&(identical(other.workCount, workCount) || other.workCount == workCount)&&const DeepCollectionEquality().equals(other._works, _works));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BookModel&&(identical(other.key, key) || other.key == key)&&(identical(other.name, name) || other.name == name)&&(identical(other.subjectType, subjectType) || other.subjectType == subjectType)&&(identical(other.solrQuery, solrQuery) || other.solrQuery == solrQuery)&&(identical(other.workCount, workCount) || other.workCount == workCount)&&const DeepCollectionEquality().equals(other._works, _works));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -254,15 +254,15 @@ int get hashCode => Object.hash(runtimeType,key,name,subjectType,solrQuery,workC
 
 @override
 String toString() {
-  return 'BookResponse(key: $key, name: $name, subjectType: $subjectType, solrQuery: $solrQuery, workCount: $workCount, works: $works)';
+  return 'BookModel(key: $key, name: $name, subjectType: $subjectType, solrQuery: $solrQuery, workCount: $workCount, works: $works)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$BookResponseCopyWith<$Res> implements $BookResponseCopyWith<$Res> {
-  factory _$BookResponseCopyWith(_BookResponse value, $Res Function(_BookResponse) _then) = __$BookResponseCopyWithImpl;
+abstract mixin class _$BookModelCopyWith<$Res> implements $BookModelCopyWith<$Res> {
+  factory _$BookModelCopyWith(_BookModel value, $Res Function(_BookModel) _then) = __$BookModelCopyWithImpl;
 @override @useResult
 $Res call({
 @JsonKey(name: "key") String? key,@JsonKey(name: "name") String? name,@JsonKey(name: "subject_type") String? subjectType,@JsonKey(name: "solr_query") String? solrQuery,@JsonKey(name: "work_count") int? workCount,@JsonKey(name: "works") List<Work>? works
@@ -273,17 +273,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$BookResponseCopyWithImpl<$Res>
-    implements _$BookResponseCopyWith<$Res> {
-  __$BookResponseCopyWithImpl(this._self, this._then);
+class __$BookModelCopyWithImpl<$Res>
+    implements _$BookModelCopyWith<$Res> {
+  __$BookModelCopyWithImpl(this._self, this._then);
 
-  final _BookResponse _self;
-  final $Res Function(_BookResponse) _then;
+  final _BookModel _self;
+  final $Res Function(_BookModel) _then;
 
-/// Create a copy of BookResponse
+/// Create a copy of BookModel
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? key = freezed,Object? name = freezed,Object? subjectType = freezed,Object? solrQuery = freezed,Object? workCount = freezed,Object? works = freezed,}) {
-  return _then(_BookResponse(
+  return _then(_BookModel(
 key: freezed == key ? _self.key : key // ignore: cast_nullable_to_non_nullable
 as String?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String?,subjectType: freezed == subjectType ? _self.subjectType : subjectType // ignore: cast_nullable_to_non_nullable

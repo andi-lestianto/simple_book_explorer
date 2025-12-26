@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'book_details_response.dart';
+part of 'book_details_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_BookDetailsResponse _$BookDetailsResponseFromJson(Map<String, dynamic> json) =>
-    _BookDetailsResponse(
+_BookDetailsModel _$BookDetailsModelFromJson(Map<String, dynamic> json) =>
+    _BookDetailsModel(
       description: const DescriptionConverter().fromJson(json['description']),
       title: json['title'] as String?,
       key: json['key'] as String?,
@@ -52,28 +52,27 @@ _BookDetailsResponse _$BookDetailsResponseFromJson(Map<String, dynamic> json) =>
           : Created.fromJson(json['last_modified'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$BookDetailsResponseToJson(
-  _BookDetailsResponse instance,
-) => <String, dynamic>{
-  'description': const DescriptionConverter().toJson(instance.description),
-  'title': instance.title,
-  'key': instance.key,
-  'authors': instance.authors,
-  'type': instance.type,
-  'covers': instance.covers,
-  'first_sentence': instance.firstSentence,
-  'first_publish_date': instance.firstPublishDate,
-  'links': instance.links,
-  'subject_places': instance.subjectPlaces,
-  'subjects': instance.subjects,
-  'subject_people': instance.subjectPeople,
-  'subject_times': instance.subjectTimes,
-  'excerpts': instance.excerpts,
-  'latest_revision': instance.latestRevision,
-  'revision': instance.revision,
-  'created': instance.created,
-  'last_modified': instance.lastModified,
-};
+Map<String, dynamic> _$BookDetailsModelToJson(_BookDetailsModel instance) =>
+    <String, dynamic>{
+      'description': const DescriptionConverter().toJson(instance.description),
+      'title': instance.title,
+      'key': instance.key,
+      'authors': instance.authors,
+      'type': instance.type,
+      'covers': instance.covers,
+      'first_sentence': instance.firstSentence,
+      'first_publish_date': instance.firstPublishDate,
+      'links': instance.links,
+      'subject_places': instance.subjectPlaces,
+      'subjects': instance.subjects,
+      'subject_people': instance.subjectPeople,
+      'subject_times': instance.subjectTimes,
+      'excerpts': instance.excerpts,
+      'latest_revision': instance.latestRevision,
+      'revision': instance.revision,
+      'created': instance.created,
+      'last_modified': instance.lastModified,
+    };
 
 _Author _$AuthorFromJson(Map<String, dynamic> json) => _Author(
   author: json['author'] == null

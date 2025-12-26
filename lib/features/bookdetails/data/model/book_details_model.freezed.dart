@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'book_details_response.dart';
+part of 'book_details_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,22 +13,22 @@ part of 'book_details_response.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$BookDetailsResponse {
+mixin _$BookDetailsModel {
 
 @DescriptionConverter() String? get description;@JsonKey(name: "title") String? get title;@JsonKey(name: "key") String? get key;@JsonKey(name: "authors") List<Author>? get authors;@JsonKey(name: "type") Type? get type;@JsonKey(name: "covers") List<int>? get covers;@JsonKey(name: "first_sentence") Created? get firstSentence;@JsonKey(name: "first_publish_date") String? get firstPublishDate;@JsonKey(name: "links") List<Link>? get links;@JsonKey(name: "subject_places") List<String>? get subjectPlaces;@JsonKey(name: "subjects") List<String>? get subjects;@JsonKey(name: "subject_people") List<String>? get subjectPeople;@JsonKey(name: "subject_times") List<String>? get subjectTimes;@JsonKey(name: "excerpts") List<Excerpt>? get excerpts;@JsonKey(name: "latest_revision") int? get latestRevision;@JsonKey(name: "revision") int? get revision;@JsonKey(name: "created") Created? get created;@JsonKey(name: "last_modified") Created? get lastModified;
-/// Create a copy of BookDetailsResponse
+/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$BookDetailsResponseCopyWith<BookDetailsResponse> get copyWith => _$BookDetailsResponseCopyWithImpl<BookDetailsResponse>(this as BookDetailsResponse, _$identity);
+$BookDetailsModelCopyWith<BookDetailsModel> get copyWith => _$BookDetailsModelCopyWithImpl<BookDetailsModel>(this as BookDetailsModel, _$identity);
 
-  /// Serializes this BookDetailsResponse to a JSON map.
+  /// Serializes this BookDetailsModel to a JSON map.
   Map<String, dynamic> toJson();
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is BookDetailsResponse&&(identical(other.description, description) || other.description == description)&&(identical(other.title, title) || other.title == title)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.authors, authors)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.covers, covers)&&(identical(other.firstSentence, firstSentence) || other.firstSentence == firstSentence)&&(identical(other.firstPublishDate, firstPublishDate) || other.firstPublishDate == firstPublishDate)&&const DeepCollectionEquality().equals(other.links, links)&&const DeepCollectionEquality().equals(other.subjectPlaces, subjectPlaces)&&const DeepCollectionEquality().equals(other.subjects, subjects)&&const DeepCollectionEquality().equals(other.subjectPeople, subjectPeople)&&const DeepCollectionEquality().equals(other.subjectTimes, subjectTimes)&&const DeepCollectionEquality().equals(other.excerpts, excerpts)&&(identical(other.latestRevision, latestRevision) || other.latestRevision == latestRevision)&&(identical(other.revision, revision) || other.revision == revision)&&(identical(other.created, created) || other.created == created)&&(identical(other.lastModified, lastModified) || other.lastModified == lastModified));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is BookDetailsModel&&(identical(other.description, description) || other.description == description)&&(identical(other.title, title) || other.title == title)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.authors, authors)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.covers, covers)&&(identical(other.firstSentence, firstSentence) || other.firstSentence == firstSentence)&&(identical(other.firstPublishDate, firstPublishDate) || other.firstPublishDate == firstPublishDate)&&const DeepCollectionEquality().equals(other.links, links)&&const DeepCollectionEquality().equals(other.subjectPlaces, subjectPlaces)&&const DeepCollectionEquality().equals(other.subjects, subjects)&&const DeepCollectionEquality().equals(other.subjectPeople, subjectPeople)&&const DeepCollectionEquality().equals(other.subjectTimes, subjectTimes)&&const DeepCollectionEquality().equals(other.excerpts, excerpts)&&(identical(other.latestRevision, latestRevision) || other.latestRevision == latestRevision)&&(identical(other.revision, revision) || other.revision == revision)&&(identical(other.created, created) || other.created == created)&&(identical(other.lastModified, lastModified) || other.lastModified == lastModified));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -37,15 +37,15 @@ int get hashCode => Object.hash(runtimeType,description,title,key,const DeepColl
 
 @override
 String toString() {
-  return 'BookDetailsResponse(description: $description, title: $title, key: $key, authors: $authors, type: $type, covers: $covers, firstSentence: $firstSentence, firstPublishDate: $firstPublishDate, links: $links, subjectPlaces: $subjectPlaces, subjects: $subjects, subjectPeople: $subjectPeople, subjectTimes: $subjectTimes, excerpts: $excerpts, latestRevision: $latestRevision, revision: $revision, created: $created, lastModified: $lastModified)';
+  return 'BookDetailsModel(description: $description, title: $title, key: $key, authors: $authors, type: $type, covers: $covers, firstSentence: $firstSentence, firstPublishDate: $firstPublishDate, links: $links, subjectPlaces: $subjectPlaces, subjects: $subjects, subjectPeople: $subjectPeople, subjectTimes: $subjectTimes, excerpts: $excerpts, latestRevision: $latestRevision, revision: $revision, created: $created, lastModified: $lastModified)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $BookDetailsResponseCopyWith<$Res>  {
-  factory $BookDetailsResponseCopyWith(BookDetailsResponse value, $Res Function(BookDetailsResponse) _then) = _$BookDetailsResponseCopyWithImpl;
+abstract mixin class $BookDetailsModelCopyWith<$Res>  {
+  factory $BookDetailsModelCopyWith(BookDetailsModel value, $Res Function(BookDetailsModel) _then) = _$BookDetailsModelCopyWithImpl;
 @useResult
 $Res call({
 @DescriptionConverter() String? description,@JsonKey(name: "title") String? title,@JsonKey(name: "key") String? key,@JsonKey(name: "authors") List<Author>? authors,@JsonKey(name: "type") Type? type,@JsonKey(name: "covers") List<int>? covers,@JsonKey(name: "first_sentence") Created? firstSentence,@JsonKey(name: "first_publish_date") String? firstPublishDate,@JsonKey(name: "links") List<Link>? links,@JsonKey(name: "subject_places") List<String>? subjectPlaces,@JsonKey(name: "subjects") List<String>? subjects,@JsonKey(name: "subject_people") List<String>? subjectPeople,@JsonKey(name: "subject_times") List<String>? subjectTimes,@JsonKey(name: "excerpts") List<Excerpt>? excerpts,@JsonKey(name: "latest_revision") int? latestRevision,@JsonKey(name: "revision") int? revision,@JsonKey(name: "created") Created? created,@JsonKey(name: "last_modified") Created? lastModified
@@ -56,14 +56,14 @@ $TypeCopyWith<$Res>? get type;$CreatedCopyWith<$Res>? get firstSentence;$Created
 
 }
 /// @nodoc
-class _$BookDetailsResponseCopyWithImpl<$Res>
-    implements $BookDetailsResponseCopyWith<$Res> {
-  _$BookDetailsResponseCopyWithImpl(this._self, this._then);
+class _$BookDetailsModelCopyWithImpl<$Res>
+    implements $BookDetailsModelCopyWith<$Res> {
+  _$BookDetailsModelCopyWithImpl(this._self, this._then);
 
-  final BookDetailsResponse _self;
-  final $Res Function(BookDetailsResponse) _then;
+  final BookDetailsModel _self;
+  final $Res Function(BookDetailsModel) _then;
 
-/// Create a copy of BookDetailsResponse
+/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? description = freezed,Object? title = freezed,Object? key = freezed,Object? authors = freezed,Object? type = freezed,Object? covers = freezed,Object? firstSentence = freezed,Object? firstPublishDate = freezed,Object? links = freezed,Object? subjectPlaces = freezed,Object? subjects = freezed,Object? subjectPeople = freezed,Object? subjectTimes = freezed,Object? excerpts = freezed,Object? latestRevision = freezed,Object? revision = freezed,Object? created = freezed,Object? lastModified = freezed,}) {
   return _then(_self.copyWith(
@@ -88,7 +88,7 @@ as Created?,lastModified: freezed == lastModified ? _self.lastModified : lastMod
 as Created?,
   ));
 }
-/// Create a copy of BookDetailsResponse
+/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -100,7 +100,7 @@ $TypeCopyWith<$Res>? get type {
   return $TypeCopyWith<$Res>(_self.type!, (value) {
     return _then(_self.copyWith(type: value));
   });
-}/// Create a copy of BookDetailsResponse
+}/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -112,7 +112,7 @@ $CreatedCopyWith<$Res>? get firstSentence {
   return $CreatedCopyWith<$Res>(_self.firstSentence!, (value) {
     return _then(_self.copyWith(firstSentence: value));
   });
-}/// Create a copy of BookDetailsResponse
+}/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -124,7 +124,7 @@ $CreatedCopyWith<$Res>? get created {
   return $CreatedCopyWith<$Res>(_self.created!, (value) {
     return _then(_self.copyWith(created: value));
   });
-}/// Create a copy of BookDetailsResponse
+}/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -140,8 +140,8 @@ $CreatedCopyWith<$Res>? get lastModified {
 }
 
 
-/// Adds pattern-matching-related methods to [BookDetailsResponse].
-extension BookDetailsResponsePatterns on BookDetailsResponse {
+/// Adds pattern-matching-related methods to [BookDetailsModel].
+extension BookDetailsModelPatterns on BookDetailsModel {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -154,10 +154,10 @@ extension BookDetailsResponsePatterns on BookDetailsResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _BookDetailsResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _BookDetailsModel value)?  $default,{required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _BookDetailsResponse() when $default != null:
+case _BookDetailsModel() when $default != null:
 return $default(_that);case _:
   return orElse();
 
@@ -176,10 +176,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _BookDetailsResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _BookDetailsModel value)  $default,){
 final _that = this;
 switch (_that) {
-case _BookDetailsResponse():
+case _BookDetailsModel():
 return $default(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -197,10 +197,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _BookDetailsResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _BookDetailsModel value)?  $default,){
 final _that = this;
 switch (_that) {
-case _BookDetailsResponse() when $default != null:
+case _BookDetailsModel() when $default != null:
 return $default(_that);case _:
   return null;
 
@@ -220,7 +220,7 @@ return $default(_that);case _:
 
 @optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@DescriptionConverter()  String? description, @JsonKey(name: "title")  String? title, @JsonKey(name: "key")  String? key, @JsonKey(name: "authors")  List<Author>? authors, @JsonKey(name: "type")  Type? type, @JsonKey(name: "covers")  List<int>? covers, @JsonKey(name: "first_sentence")  Created? firstSentence, @JsonKey(name: "first_publish_date")  String? firstPublishDate, @JsonKey(name: "links")  List<Link>? links, @JsonKey(name: "subject_places")  List<String>? subjectPlaces, @JsonKey(name: "subjects")  List<String>? subjects, @JsonKey(name: "subject_people")  List<String>? subjectPeople, @JsonKey(name: "subject_times")  List<String>? subjectTimes, @JsonKey(name: "excerpts")  List<Excerpt>? excerpts, @JsonKey(name: "latest_revision")  int? latestRevision, @JsonKey(name: "revision")  int? revision, @JsonKey(name: "created")  Created? created, @JsonKey(name: "last_modified")  Created? lastModified)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _BookDetailsResponse() when $default != null:
+case _BookDetailsModel() when $default != null:
 return $default(_that.description,_that.title,_that.key,_that.authors,_that.type,_that.covers,_that.firstSentence,_that.firstPublishDate,_that.links,_that.subjectPlaces,_that.subjects,_that.subjectPeople,_that.subjectTimes,_that.excerpts,_that.latestRevision,_that.revision,_that.created,_that.lastModified);case _:
   return orElse();
 
@@ -241,7 +241,7 @@ return $default(_that.description,_that.title,_that.key,_that.authors,_that.type
 
 @optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@DescriptionConverter()  String? description, @JsonKey(name: "title")  String? title, @JsonKey(name: "key")  String? key, @JsonKey(name: "authors")  List<Author>? authors, @JsonKey(name: "type")  Type? type, @JsonKey(name: "covers")  List<int>? covers, @JsonKey(name: "first_sentence")  Created? firstSentence, @JsonKey(name: "first_publish_date")  String? firstPublishDate, @JsonKey(name: "links")  List<Link>? links, @JsonKey(name: "subject_places")  List<String>? subjectPlaces, @JsonKey(name: "subjects")  List<String>? subjects, @JsonKey(name: "subject_people")  List<String>? subjectPeople, @JsonKey(name: "subject_times")  List<String>? subjectTimes, @JsonKey(name: "excerpts")  List<Excerpt>? excerpts, @JsonKey(name: "latest_revision")  int? latestRevision, @JsonKey(name: "revision")  int? revision, @JsonKey(name: "created")  Created? created, @JsonKey(name: "last_modified")  Created? lastModified)  $default,) {final _that = this;
 switch (_that) {
-case _BookDetailsResponse():
+case _BookDetailsModel():
 return $default(_that.description,_that.title,_that.key,_that.authors,_that.type,_that.covers,_that.firstSentence,_that.firstPublishDate,_that.links,_that.subjectPlaces,_that.subjects,_that.subjectPeople,_that.subjectTimes,_that.excerpts,_that.latestRevision,_that.revision,_that.created,_that.lastModified);case _:
   throw StateError('Unexpected subclass');
 
@@ -261,7 +261,7 @@ return $default(_that.description,_that.title,_that.key,_that.authors,_that.type
 
 @optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@DescriptionConverter()  String? description, @JsonKey(name: "title")  String? title, @JsonKey(name: "key")  String? key, @JsonKey(name: "authors")  List<Author>? authors, @JsonKey(name: "type")  Type? type, @JsonKey(name: "covers")  List<int>? covers, @JsonKey(name: "first_sentence")  Created? firstSentence, @JsonKey(name: "first_publish_date")  String? firstPublishDate, @JsonKey(name: "links")  List<Link>? links, @JsonKey(name: "subject_places")  List<String>? subjectPlaces, @JsonKey(name: "subjects")  List<String>? subjects, @JsonKey(name: "subject_people")  List<String>? subjectPeople, @JsonKey(name: "subject_times")  List<String>? subjectTimes, @JsonKey(name: "excerpts")  List<Excerpt>? excerpts, @JsonKey(name: "latest_revision")  int? latestRevision, @JsonKey(name: "revision")  int? revision, @JsonKey(name: "created")  Created? created, @JsonKey(name: "last_modified")  Created? lastModified)?  $default,) {final _that = this;
 switch (_that) {
-case _BookDetailsResponse() when $default != null:
+case _BookDetailsModel() when $default != null:
 return $default(_that.description,_that.title,_that.key,_that.authors,_that.type,_that.covers,_that.firstSentence,_that.firstPublishDate,_that.links,_that.subjectPlaces,_that.subjects,_that.subjectPeople,_that.subjectTimes,_that.excerpts,_that.latestRevision,_that.revision,_that.created,_that.lastModified);case _:
   return null;
 
@@ -273,9 +273,9 @@ return $default(_that.description,_that.title,_that.key,_that.authors,_that.type
 /// @nodoc
 @JsonSerializable()
 
-class _BookDetailsResponse extends BookDetailsResponse {
-  const _BookDetailsResponse({@DescriptionConverter() this.description, @JsonKey(name: "title") this.title, @JsonKey(name: "key") this.key, @JsonKey(name: "authors") final  List<Author>? authors, @JsonKey(name: "type") this.type, @JsonKey(name: "covers") final  List<int>? covers, @JsonKey(name: "first_sentence") this.firstSentence, @JsonKey(name: "first_publish_date") this.firstPublishDate, @JsonKey(name: "links") final  List<Link>? links, @JsonKey(name: "subject_places") final  List<String>? subjectPlaces, @JsonKey(name: "subjects") final  List<String>? subjects, @JsonKey(name: "subject_people") final  List<String>? subjectPeople, @JsonKey(name: "subject_times") final  List<String>? subjectTimes, @JsonKey(name: "excerpts") final  List<Excerpt>? excerpts, @JsonKey(name: "latest_revision") this.latestRevision, @JsonKey(name: "revision") this.revision, @JsonKey(name: "created") this.created, @JsonKey(name: "last_modified") this.lastModified}): _authors = authors,_covers = covers,_links = links,_subjectPlaces = subjectPlaces,_subjects = subjects,_subjectPeople = subjectPeople,_subjectTimes = subjectTimes,_excerpts = excerpts,super._();
-  factory _BookDetailsResponse.fromJson(Map<String, dynamic> json) => _$BookDetailsResponseFromJson(json);
+class _BookDetailsModel extends BookDetailsModel {
+  const _BookDetailsModel({@DescriptionConverter() this.description, @JsonKey(name: "title") this.title, @JsonKey(name: "key") this.key, @JsonKey(name: "authors") final  List<Author>? authors, @JsonKey(name: "type") this.type, @JsonKey(name: "covers") final  List<int>? covers, @JsonKey(name: "first_sentence") this.firstSentence, @JsonKey(name: "first_publish_date") this.firstPublishDate, @JsonKey(name: "links") final  List<Link>? links, @JsonKey(name: "subject_places") final  List<String>? subjectPlaces, @JsonKey(name: "subjects") final  List<String>? subjects, @JsonKey(name: "subject_people") final  List<String>? subjectPeople, @JsonKey(name: "subject_times") final  List<String>? subjectTimes, @JsonKey(name: "excerpts") final  List<Excerpt>? excerpts, @JsonKey(name: "latest_revision") this.latestRevision, @JsonKey(name: "revision") this.revision, @JsonKey(name: "created") this.created, @JsonKey(name: "last_modified") this.lastModified}): _authors = authors,_covers = covers,_links = links,_subjectPlaces = subjectPlaces,_subjects = subjects,_subjectPeople = subjectPeople,_subjectTimes = subjectTimes,_excerpts = excerpts,super._();
+  factory _BookDetailsModel.fromJson(Map<String, dynamic> json) => _$BookDetailsModelFromJson(json);
 
 @override@DescriptionConverter() final  String? description;
 @override@JsonKey(name: "title") final  String? title;
@@ -360,20 +360,20 @@ class _BookDetailsResponse extends BookDetailsResponse {
 @override@JsonKey(name: "created") final  Created? created;
 @override@JsonKey(name: "last_modified") final  Created? lastModified;
 
-/// Create a copy of BookDetailsResponse
+/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$BookDetailsResponseCopyWith<_BookDetailsResponse> get copyWith => __$BookDetailsResponseCopyWithImpl<_BookDetailsResponse>(this, _$identity);
+_$BookDetailsModelCopyWith<_BookDetailsModel> get copyWith => __$BookDetailsModelCopyWithImpl<_BookDetailsModel>(this, _$identity);
 
 @override
 Map<String, dynamic> toJson() {
-  return _$BookDetailsResponseToJson(this, );
+  return _$BookDetailsModelToJson(this, );
 }
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BookDetailsResponse&&(identical(other.description, description) || other.description == description)&&(identical(other.title, title) || other.title == title)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other._authors, _authors)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other._covers, _covers)&&(identical(other.firstSentence, firstSentence) || other.firstSentence == firstSentence)&&(identical(other.firstPublishDate, firstPublishDate) || other.firstPublishDate == firstPublishDate)&&const DeepCollectionEquality().equals(other._links, _links)&&const DeepCollectionEquality().equals(other._subjectPlaces, _subjectPlaces)&&const DeepCollectionEquality().equals(other._subjects, _subjects)&&const DeepCollectionEquality().equals(other._subjectPeople, _subjectPeople)&&const DeepCollectionEquality().equals(other._subjectTimes, _subjectTimes)&&const DeepCollectionEquality().equals(other._excerpts, _excerpts)&&(identical(other.latestRevision, latestRevision) || other.latestRevision == latestRevision)&&(identical(other.revision, revision) || other.revision == revision)&&(identical(other.created, created) || other.created == created)&&(identical(other.lastModified, lastModified) || other.lastModified == lastModified));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BookDetailsModel&&(identical(other.description, description) || other.description == description)&&(identical(other.title, title) || other.title == title)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other._authors, _authors)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other._covers, _covers)&&(identical(other.firstSentence, firstSentence) || other.firstSentence == firstSentence)&&(identical(other.firstPublishDate, firstPublishDate) || other.firstPublishDate == firstPublishDate)&&const DeepCollectionEquality().equals(other._links, _links)&&const DeepCollectionEquality().equals(other._subjectPlaces, _subjectPlaces)&&const DeepCollectionEquality().equals(other._subjects, _subjects)&&const DeepCollectionEquality().equals(other._subjectPeople, _subjectPeople)&&const DeepCollectionEquality().equals(other._subjectTimes, _subjectTimes)&&const DeepCollectionEquality().equals(other._excerpts, _excerpts)&&(identical(other.latestRevision, latestRevision) || other.latestRevision == latestRevision)&&(identical(other.revision, revision) || other.revision == revision)&&(identical(other.created, created) || other.created == created)&&(identical(other.lastModified, lastModified) || other.lastModified == lastModified));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -382,15 +382,15 @@ int get hashCode => Object.hash(runtimeType,description,title,key,const DeepColl
 
 @override
 String toString() {
-  return 'BookDetailsResponse(description: $description, title: $title, key: $key, authors: $authors, type: $type, covers: $covers, firstSentence: $firstSentence, firstPublishDate: $firstPublishDate, links: $links, subjectPlaces: $subjectPlaces, subjects: $subjects, subjectPeople: $subjectPeople, subjectTimes: $subjectTimes, excerpts: $excerpts, latestRevision: $latestRevision, revision: $revision, created: $created, lastModified: $lastModified)';
+  return 'BookDetailsModel(description: $description, title: $title, key: $key, authors: $authors, type: $type, covers: $covers, firstSentence: $firstSentence, firstPublishDate: $firstPublishDate, links: $links, subjectPlaces: $subjectPlaces, subjects: $subjects, subjectPeople: $subjectPeople, subjectTimes: $subjectTimes, excerpts: $excerpts, latestRevision: $latestRevision, revision: $revision, created: $created, lastModified: $lastModified)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$BookDetailsResponseCopyWith<$Res> implements $BookDetailsResponseCopyWith<$Res> {
-  factory _$BookDetailsResponseCopyWith(_BookDetailsResponse value, $Res Function(_BookDetailsResponse) _then) = __$BookDetailsResponseCopyWithImpl;
+abstract mixin class _$BookDetailsModelCopyWith<$Res> implements $BookDetailsModelCopyWith<$Res> {
+  factory _$BookDetailsModelCopyWith(_BookDetailsModel value, $Res Function(_BookDetailsModel) _then) = __$BookDetailsModelCopyWithImpl;
 @override @useResult
 $Res call({
 @DescriptionConverter() String? description,@JsonKey(name: "title") String? title,@JsonKey(name: "key") String? key,@JsonKey(name: "authors") List<Author>? authors,@JsonKey(name: "type") Type? type,@JsonKey(name: "covers") List<int>? covers,@JsonKey(name: "first_sentence") Created? firstSentence,@JsonKey(name: "first_publish_date") String? firstPublishDate,@JsonKey(name: "links") List<Link>? links,@JsonKey(name: "subject_places") List<String>? subjectPlaces,@JsonKey(name: "subjects") List<String>? subjects,@JsonKey(name: "subject_people") List<String>? subjectPeople,@JsonKey(name: "subject_times") List<String>? subjectTimes,@JsonKey(name: "excerpts") List<Excerpt>? excerpts,@JsonKey(name: "latest_revision") int? latestRevision,@JsonKey(name: "revision") int? revision,@JsonKey(name: "created") Created? created,@JsonKey(name: "last_modified") Created? lastModified
@@ -401,17 +401,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$BookDetailsResponseCopyWithImpl<$Res>
-    implements _$BookDetailsResponseCopyWith<$Res> {
-  __$BookDetailsResponseCopyWithImpl(this._self, this._then);
+class __$BookDetailsModelCopyWithImpl<$Res>
+    implements _$BookDetailsModelCopyWith<$Res> {
+  __$BookDetailsModelCopyWithImpl(this._self, this._then);
 
-  final _BookDetailsResponse _self;
-  final $Res Function(_BookDetailsResponse) _then;
+  final _BookDetailsModel _self;
+  final $Res Function(_BookDetailsModel) _then;
 
-/// Create a copy of BookDetailsResponse
+/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? description = freezed,Object? title = freezed,Object? key = freezed,Object? authors = freezed,Object? type = freezed,Object? covers = freezed,Object? firstSentence = freezed,Object? firstPublishDate = freezed,Object? links = freezed,Object? subjectPlaces = freezed,Object? subjects = freezed,Object? subjectPeople = freezed,Object? subjectTimes = freezed,Object? excerpts = freezed,Object? latestRevision = freezed,Object? revision = freezed,Object? created = freezed,Object? lastModified = freezed,}) {
-  return _then(_BookDetailsResponse(
+  return _then(_BookDetailsModel(
 description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
 as String?,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
 as String?,key: freezed == key ? _self.key : key // ignore: cast_nullable_to_non_nullable
@@ -434,7 +434,7 @@ as Created?,
   ));
 }
 
-/// Create a copy of BookDetailsResponse
+/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -446,7 +446,7 @@ $TypeCopyWith<$Res>? get type {
   return $TypeCopyWith<$Res>(_self.type!, (value) {
     return _then(_self.copyWith(type: value));
   });
-}/// Create a copy of BookDetailsResponse
+}/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -458,7 +458,7 @@ $CreatedCopyWith<$Res>? get firstSentence {
   return $CreatedCopyWith<$Res>(_self.firstSentence!, (value) {
     return _then(_self.copyWith(firstSentence: value));
   });
-}/// Create a copy of BookDetailsResponse
+}/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -470,7 +470,7 @@ $CreatedCopyWith<$Res>? get created {
   return $CreatedCopyWith<$Res>(_self.created!, (value) {
     return _then(_self.copyWith(created: value));
   });
-}/// Create a copy of BookDetailsResponse
+}/// Create a copy of BookDetailsModel
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')

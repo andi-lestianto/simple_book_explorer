@@ -6,10 +6,10 @@ import 'package:injectable/injectable.dart';
 import 'package:simple_book_explorer/core/error/exceptions.dart';
 import 'package:simple_book_explorer/core/error/mapper/dio_error_mapper.dart';
 import 'package:simple_book_explorer/core/network/dio_client.dart';
-import 'package:simple_book_explorer/features/bookdetails/data/model/book_details_response.dart';
+import 'package:simple_book_explorer/features/bookdetails/data/model/book_details_model.dart';
 
 abstract class BookDetailsDatasource {
-  TaskEither<Exception, BookDetailsResponse> fetchBookDetails({
+  TaskEither<Exception, BookDetailsModel> fetchBookDetails({
     required String worksKey,
   });
 }
@@ -21,7 +21,7 @@ class BookDetailsDataSourceImpl implements BookDetailsDatasource {
   BookDetailsDataSourceImpl(this._dioClient);
 
   @override
-  TaskEither<Exception, BookDetailsResponse> fetchBookDetails({
+  TaskEither<Exception, BookDetailsModel> fetchBookDetails({
     required String worksKey,
   }) {
     return TaskEither.tryCatch(
@@ -29,7 +29,7 @@ class BookDetailsDataSourceImpl implements BookDetailsDatasource {
         final response = await _dioClient.get<Map<String, dynamic>>(
           '$worksKey.json',
         );
-        return BookDetailsResponse.fromJson(response.data!);
+        return BookDetailsModel.fromJson(response.data!);
       },
       (error, _) {
         log(error.toString());

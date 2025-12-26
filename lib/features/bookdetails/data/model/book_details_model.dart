@@ -5,14 +5,14 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:simple_book_explorer/features/bookdetails/domain/entity/book_details_entity.dart';
 
-part 'book_details_response.freezed.dart';
-part 'book_details_response.g.dart';
+part 'book_details_model.freezed.dart';
+part 'book_details_model.g.dart';
 
 @freezed
-abstract class BookDetailsResponse with _$BookDetailsResponse {
-  const BookDetailsResponse._();
+abstract class BookDetailsModel with _$BookDetailsModel {
+  const BookDetailsModel._();
 
-  const factory BookDetailsResponse({
+  const factory BookDetailsModel({
     @DescriptionConverter() String? description,
     @JsonKey(name: "title") String? title,
     @JsonKey(name: "key") String? key,
@@ -31,10 +31,10 @@ abstract class BookDetailsResponse with _$BookDetailsResponse {
     @JsonKey(name: "revision") int? revision,
     @JsonKey(name: "created") Created? created,
     @JsonKey(name: "last_modified") Created? lastModified,
-  }) = _BookDetailsResponse;
+  }) = _BookDetailsModel;
 
-  factory BookDetailsResponse.fromJson(Map<String, dynamic> json) =>
-      _$BookDetailsResponseFromJson(json);
+  factory BookDetailsModel.fromJson(Map<String, dynamic> json) =>
+      _$BookDetailsModelFromJson(json);
 
   BookDetailsEntity toBookDetailsEntity() {
     return BookDetailsEntity(

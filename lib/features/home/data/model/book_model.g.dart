@@ -1,24 +1,23 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'book_response.dart';
+part of 'book_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_BookResponse _$BookResponseFromJson(Map<String, dynamic> json) =>
-    _BookResponse(
-      key: json['key'] as String?,
-      name: json['name'] as String?,
-      subjectType: json['subject_type'] as String?,
-      solrQuery: json['solr_query'] as String?,
-      workCount: (json['work_count'] as num?)?.toInt(),
-      works: (json['works'] as List<dynamic>?)
-          ?.map((e) => Work.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_BookModel _$BookModelFromJson(Map<String, dynamic> json) => _BookModel(
+  key: json['key'] as String?,
+  name: json['name'] as String?,
+  subjectType: json['subject_type'] as String?,
+  solrQuery: json['solr_query'] as String?,
+  workCount: (json['work_count'] as num?)?.toInt(),
+  works: (json['works'] as List<dynamic>?)
+      ?.map((e) => Work.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
-Map<String, dynamic> _$BookResponseToJson(_BookResponse instance) =>
+Map<String, dynamic> _$BookModelToJson(_BookModel instance) =>
     <String, dynamic>{
       'key': instance.key,
       'name': instance.name,

@@ -1,22 +1,22 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:simple_book_explorer/features/home/domain/entity/book_entity.dart';
 
-part 'book_response.freezed.dart';
-part 'book_response.g.dart';
+part 'book_model.freezed.dart';
+part 'book_model.g.dart';
 
 @freezed
-abstract class BookResponse with _$BookResponse {
-  const factory BookResponse({
+abstract class BookModel with _$BookModel {
+  const factory BookModel({
     @JsonKey(name: "key") String? key,
     @JsonKey(name: "name") String? name,
     @JsonKey(name: "subject_type") String? subjectType,
     @JsonKey(name: "solr_query") String? solrQuery,
     @JsonKey(name: "work_count") int? workCount,
     @JsonKey(name: "works") List<Work>? works,
-  }) = _BookResponse;
+  }) = _BookModel;
 
-  factory BookResponse.fromJson(Map<String, dynamic> json) =>
-      _$BookResponseFromJson(json);
+  factory BookModel.fromJson(Map<String, dynamic> json) =>
+      _$BookModelFromJson(json);
 }
 
 @freezed
