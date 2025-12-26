@@ -4,6 +4,9 @@ import 'dart:developer' as dev;
 class DioInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+    const userAgent =
+        'simple_book_explorer/0.0.1 (contact: andi7les@gmail.com)';
+    options.headers['User-Agent'] = userAgent;
     dev.log('Request[${options.method}] => PATH: ${options.path}');
     super.onRequest(options, handler);
   }

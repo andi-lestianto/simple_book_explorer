@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:simple_book_explorer/features/home/presentation/bloc/home_bloc.dart';
+import 'package:simple_book_explorer/routes/route_names.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -30,6 +32,12 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context, index) {
                 final book = books[index];
                 return ListTile(
+                  onTap: () {
+                    context.pushNamed(
+                      RouteNames.bookDetails,
+                      pathParameters: {'worksKey': book.key},
+                    );
+                  },
                   title: Text(book.title),
                   subtitle: Text(book.author.map((e) => e.name).join(', ')),
                 );

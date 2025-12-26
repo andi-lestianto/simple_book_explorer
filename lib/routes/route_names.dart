@@ -2,5 +2,5 @@ class RouteNames {
   RouteNames._();
 
   static const String home = '/home';
-  static const String bookDetail = '/bookDetail';
+  static const String bookDetails = '/works/:worksKey';
 }

@@ -13,6 +13,16 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:simple_book_explorer/core/di/network_module.dart' as _i252;
 import 'package:simple_book_explorer/core/network/dio_client.dart' as _i670;
+import 'package:simple_book_explorer/features/bookdetails/data/datasource/book_details_data_source.dart'
+    as _i249;
+import 'package:simple_book_explorer/features/bookdetails/data/repository/book_details_repository_impl.dart'
+    as _i911;
+import 'package:simple_book_explorer/features/bookdetails/domain/repository/book_details_repository.dart'
+    as _i891;
+import 'package:simple_book_explorer/features/bookdetails/domain/usecase/get_book_details_usecase.dart'
+    as _i998;
+import 'package:simple_book_explorer/features/bookdetails/presentation/bloc/bookdetails_bloc.dart'
+    as _i56;
 import 'package:simple_book_explorer/features/home/data/datasource/books_datasource.dart'
     as _i483;
 import 'package:simple_book_explorer/features/home/data/repository/books_repository_impl.dart'
@@ -48,14 +58,26 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i670.DioClient>(
       () => _i670.DioClientImpl(gh<String>(instanceName: 'baseUrl')),
     );
+    gh.lazySingleton<_i249.BookDetailsDatasource>(
+      () => _i249.BookDetailsDataSourceImpl(gh<_i670.DioClient>()),
+    );
     gh.lazySingleton<_i483.BooksDatasource>(
       () => _i483.BooksDatasourceImpl(gh<_i670.DioClient>()),
+    );
+    gh.lazySingleton<_i891.BookDetailsRepository>(
+      () => _i911.BookDetailsRepositoryImpl(gh<_i249.BookDetailsDatasource>()),
     );
     gh.lazySingleton<_i957.BooksRepository>(
       () => _i509.BooksRepositoryImpl(gh<_i483.BooksDatasource>()),
     );
+    gh.lazySingleton<_i998.GetBookDetailsUsecase>(
+      () => _i998.GetBookDetailsUsecase(gh<_i891.BookDetailsRepository>()),
+    );
     gh.lazySingleton<_i638.GetBooksUsecase>(
       () => _i638.GetBooksUsecase(gh<_i957.BooksRepository>()),
+    );
+    gh.factory<_i56.BookDetailsBloc>(
+      () => _i56.BookDetailsBloc(gh<_i998.GetBookDetailsUsecase>()),
     );
     gh.factory<_i672.HomeBloc>(
       () => _i672.HomeBloc(gh<_i638.GetBooksUsecase>()),

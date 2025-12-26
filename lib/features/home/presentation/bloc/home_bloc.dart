@@ -18,7 +18,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<HomeEvent>((event, emit) async {
       await event.when(
         fetchBooks: () => fetchBooks(emit),
-        changeLimit: changeLimit,
+        changeLimit: (limit) => changeLimit(limit),
       );
     });
   }
