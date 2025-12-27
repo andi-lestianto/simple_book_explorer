@@ -7,6 +7,7 @@ import 'package:simple_book_explorer/core/widgets/custom_error_widget.dart';
 import 'package:simple_book_explorer/features/bookdetails/presentation/bloc/bookdetails_bloc.dart';
 import 'package:simple_book_explorer/features/bookdetails/presentation/widget/bottombar/book_details_bottom_bar_widget.dart';
 import 'package:simple_book_explorer/features/bookdetails/presentation/widget/header/book_details_header_widget.dart';
+import 'package:simple_book_explorer/features/bookdetails/presentation/widget/loading/book_details_loading_widget.dart';
 import 'package:simple_book_explorer/features/bookdetails/presentation/widget/tabview/tabview_widget.dart';
 import 'package:simple_book_explorer/features/home/domain/entity/book_entity.dart';
 import 'package:simple_book_explorer/gen/assets.gen.dart';
@@ -39,7 +40,7 @@ class BookDetailsView extends StatelessWidget {
       body: BlocBuilder<BookDetailsBloc, BookDetailsState>(
         builder: (context, state) {
           return state.when(
-            loading: () => Center(child: CircularProgressIndicator()),
+            loading: () => BookDetailsLoadingWidget(),
             loaded: (bookDetails) => Column(
               children: [
                 BookDetailsHeader(),

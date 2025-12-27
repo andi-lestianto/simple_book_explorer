@@ -25,15 +25,15 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Future<void> fetchBooks(Emitter<HomeState> emit) async {
-    emit(HomeState.loading(limit: _limit));
+    emit(HomeState.loading());
 
     final result = await _getBooksUsecase.fetchBooks(limit: _limit).run();
     result.fold(
       (failure) {
-        emit(HomeState.error(message: failure.message, limit: state.limit));
+        emit(HomeState.error(message: failure.message, limit: _limit));
       },
       (books) {
-        emit(HomeState.loaded(books: books, limit: state.limit));
+        emit(HomeState.loaded(books: books, limit: _limit));
       },
     );
   }

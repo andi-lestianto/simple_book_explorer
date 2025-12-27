@@ -296,67 +296,36 @@ as int,
 /// @nodoc
 mixin _$HomeState implements DiagnosticableTreeMixin {
 
- int get limit;
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$HomeStateCopyWith<HomeState> get copyWith => _$HomeStateCopyWithImpl<HomeState>(this as HomeState, _$identity);
+
 
 
 @override
 void debugFillProperties(DiagnosticPropertiesBuilder properties) {
   properties
     ..add(DiagnosticsProperty('type', 'HomeState'))
-    ..add(DiagnosticsProperty('limit', limit));
+    ;
 }
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeState&&(identical(other.limit, limit) || other.limit == limit));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeState);
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,limit);
+int get hashCode => runtimeType.hashCode;
 
 @override
 String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  return 'HomeState(limit: $limit)';
+  return 'HomeState()';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $HomeStateCopyWith<$Res>  {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) _then) = _$HomeStateCopyWithImpl;
-@useResult
-$Res call({
- int limit
-});
-
-
-
-
-}
-/// @nodoc
-class _$HomeStateCopyWithImpl<$Res>
-    implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._self, this._then);
-
-  final HomeState _self;
-  final $Res Function(HomeState) _then;
-
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? limit = null,}) {
-  return _then(_self.copyWith(
-limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
-}
-
+class $HomeStateCopyWith<$Res>  {
+$HomeStateCopyWith(HomeState _, $Res Function(HomeState) __);
 }
 
 
@@ -444,10 +413,10 @@ return error(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( int limit)?  loading,TResult Function( List<BookEntity> books,  int limit)?  loaded,TResult Function( String message,  int limit)?  error,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  loading,TResult Function( List<BookEntity> books,  int limit)?  loaded,TResult Function( String message,  int limit)?  error,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Loading() when loading != null:
-return loading(_that.limit);case _Loaded() when loaded != null:
+return loading();case _Loaded() when loaded != null:
 return loaded(_that.books,_that.limit);case _Error() when error != null:
 return error(_that.message,_that.limit);case _:
   return orElse();
@@ -467,10 +436,10 @@ return error(_that.message,_that.limit);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( int limit)  loading,required TResult Function( List<BookEntity> books,  int limit)  loaded,required TResult Function( String message,  int limit)  error,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  loading,required TResult Function( List<BookEntity> books,  int limit)  loaded,required TResult Function( String message,  int limit)  error,}) {final _that = this;
 switch (_that) {
 case _Loading():
-return loading(_that.limit);case _Loaded():
+return loading();case _Loaded():
 return loaded(_that.books,_that.limit);case _Error():
 return error(_that.message,_that.limit);case _:
   throw StateError('Unexpected subclass');
@@ -489,10 +458,10 @@ return error(_that.message,_that.limit);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( int limit)?  loading,TResult? Function( List<BookEntity> books,  int limit)?  loaded,TResult? Function( String message,  int limit)?  error,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  loading,TResult? Function( List<BookEntity> books,  int limit)?  loaded,TResult? Function( String message,  int limit)?  error,}) {final _that = this;
 switch (_that) {
 case _Loading() when loading != null:
-return loading(_that.limit);case _Loaded() when loaded != null:
+return loading();case _Loaded() when loaded != null:
 return loaded(_that.books,_that.limit);case _Error() when error != null:
 return error(_that.message,_that.limit);case _:
   return null;
@@ -506,73 +475,39 @@ return error(_that.message,_that.limit);case _:
 
 
 class _Loading with DiagnosticableTreeMixin implements HomeState {
-  const _Loading({this.limit = 10});
+  const _Loading();
   
 
-@override@JsonKey() final  int limit;
 
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$LoadingCopyWith<_Loading> get copyWith => __$LoadingCopyWithImpl<_Loading>(this, _$identity);
+
 
 
 @override
 void debugFillProperties(DiagnosticPropertiesBuilder properties) {
   properties
     ..add(DiagnosticsProperty('type', 'HomeState.loading'))
-    ..add(DiagnosticsProperty('limit', limit));
+    ;
 }
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Loading&&(identical(other.limit, limit) || other.limit == limit));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Loading);
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,limit);
+int get hashCode => runtimeType.hashCode;
 
 @override
 String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
-  return 'HomeState.loading(limit: $limit)';
+  return 'HomeState.loading()';
 }
 
 
 }
 
-/// @nodoc
-abstract mixin class _$LoadingCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
-  factory _$LoadingCopyWith(_Loading value, $Res Function(_Loading) _then) = __$LoadingCopyWithImpl;
-@override @useResult
-$Res call({
- int limit
-});
 
 
-
-
-}
-/// @nodoc
-class __$LoadingCopyWithImpl<$Res>
-    implements _$LoadingCopyWith<$Res> {
-  __$LoadingCopyWithImpl(this._self, this._then);
-
-  final _Loading _self;
-  final $Res Function(_Loading) _then;
-
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = null,}) {
-  return _then(_Loading(
-limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
-}
-
-
-}
 
 /// @nodoc
 
@@ -588,11 +523,11 @@ class _Loaded with DiagnosticableTreeMixin implements HomeState {
   return EqualUnmodifiableListView(_books);
 }
 
-@override final  int limit;
+ final  int limit;
 
 /// Create a copy of HomeState
 /// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
+@JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 _$LoadedCopyWith<_Loaded> get copyWith => __$LoadedCopyWithImpl<_Loaded>(this, _$identity);
 
@@ -624,7 +559,7 @@ String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
 /// @nodoc
 abstract mixin class _$LoadedCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
   factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) _then) = __$LoadedCopyWithImpl;
-@override @useResult
+@useResult
 $Res call({
  List<BookEntity> books, int limit
 });
@@ -643,7 +578,7 @@ class __$LoadedCopyWithImpl<$Res>
 
 /// Create a copy of HomeState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? books = null,Object? limit = null,}) {
+@pragma('vm:prefer-inline') $Res call({Object? books = null,Object? limit = null,}) {
   return _then(_Loaded(
 books: null == books ? _self._books : books // ignore: cast_nullable_to_non_nullable
 as List<BookEntity>,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
@@ -662,11 +597,11 @@ class _Error with DiagnosticableTreeMixin implements HomeState {
   
 
  final  String message;
-@override final  int limit;
+ final  int limit;
 
 /// Create a copy of HomeState
 /// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
+@JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 _$ErrorCopyWith<_Error> get copyWith => __$ErrorCopyWithImpl<_Error>(this, _$identity);
 
@@ -698,7 +633,7 @@ String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
 /// @nodoc
 abstract mixin class _$ErrorCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
   factory _$ErrorCopyWith(_Error value, $Res Function(_Error) _then) = __$ErrorCopyWithImpl;
-@override @useResult
+@useResult
 $Res call({
  String message, int limit
 });
@@ -717,7 +652,7 @@ class __$ErrorCopyWithImpl<$Res>
 
 /// Create a copy of HomeState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? message = null,Object? limit = null,}) {
+@pragma('vm:prefer-inline') $Res call({Object? message = null,Object? limit = null,}) {
   return _then(_Error(
 message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
 as String,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable

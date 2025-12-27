@@ -10,6 +10,7 @@ import 'package:simple_book_explorer/features/home/presentation/widget/book_card
 import 'package:simple_book_explorer/features/home/presentation/widget/category_card/category_card_widget.dart';
 import 'package:simple_book_explorer/features/home/presentation/widget/category_card/category_item.dart';
 import 'package:simple_book_explorer/features/home/presentation/widget/header/home_header_widget.dart';
+import 'package:simple_book_explorer/features/home/presentation/widget/loading/home_loading_widget.dart';
 import 'package:simple_book_explorer/theme/color_theme.dart';
 import 'package:simple_book_explorer/theme/font_theme.dart';
 
@@ -44,9 +45,7 @@ class HomeView extends StatelessWidget {
                 child: BlocBuilder<HomeBloc, HomeState>(
                   builder: (context, state) {
                     return state.when(
-                      loading: (limit) => CircularProgressIndicator(
-                        color: ColorTheme.primaryBlue,
-                      ),
+                      loading: () => HomeLoadingWidget(),
                       loaded: (books, limit) => Column(
                         children: [
                           Row(
