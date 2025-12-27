@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:simple_book_explorer/core/di/injection.dart';
 import 'package:simple_book_explorer/core/widgets/custom_error_widget.dart';
 import 'package:simple_book_explorer/core/widgets/custom_grid_view.dart';
 import 'package:simple_book_explorer/features/home/presentation/bloc/home_bloc.dart';
@@ -12,20 +13,20 @@ import 'package:simple_book_explorer/features/home/presentation/widget/header/ho
 import 'package:simple_book_explorer/theme/color_theme.dart';
 import 'package:simple_book_explorer/theme/font_theme.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<HomeBloc>()..add(const HomeEvent.fetchBooks()),
+      child: const HomeView(),
+    );
+  }
 }
 
-class _HomePageState extends State<HomePage> {
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    context.read<HomeBloc>().add(const HomeEvent.fetchBooks());
-  }
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {

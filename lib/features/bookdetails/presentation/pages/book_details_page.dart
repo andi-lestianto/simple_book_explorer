@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:simple_book_explorer/core/di/injection.dart';
 import 'package:simple_book_explorer/core/widgets/custom_error_widget.dart';
 import 'package:simple_book_explorer/features/bookdetails/presentation/bloc/bookdetails_bloc.dart';
 import 'package:simple_book_explorer/features/bookdetails/presentation/widget/bottombar/book_details_bottom_bar_widget.dart';
@@ -12,26 +13,24 @@ import 'package:simple_book_explorer/gen/assets.gen.dart';
 import 'package:simple_book_explorer/theme/color_theme.dart';
 import 'package:simple_book_explorer/theme/font_theme.dart';
 
-class BookDetailsPage extends StatefulWidget {
+class BookDetailsPage extends StatelessWidget {
   final BookEntity book;
-
   const BookDetailsPage({super.key, required this.book});
 
   @override
-  State<BookDetailsPage> createState() => _BookDetailsPageState();
-}
-
-class _BookDetailsPageState extends State<BookDetailsPage> {
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    final worksKey = widget.book.key;
-
-    context.read<BookDetailsBloc>().add(
-      BookDetailsEvent.fetchBookDetails(worksKey: worksKey),
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) =>
+          getIt<BookDetailsBloc>()
+            ..add(BookDetailsEvent.fetchBookDetails(worksKey: book.key)),
+      child: BookDetailsView(book: book),
     );
   }
+}
+
+class BookDetailsView extends StatelessWidget {
+  final BookEntity book;
+  const BookDetailsView({super.key, required this.book});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +50,7 @@ class _BookDetailsPageState extends State<BookDetailsPage> {
                         Container(
                           color: ColorTheme.lightGray,
                           width: 1.sw,
-                          height: 250.w,
+                          height: 200.w,
                         ),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16.w),
@@ -104,7 +103,7 @@ class _BookDetailsPageState extends State<BookDetailsPage> {
                               ),
                               8.verticalSpace,
                               Text(
-                                'By ${widget.book.author.map((e) => e.name).join(', ')}',
+                                'By ${book.author.map((e) => e.name).join(', ')}',
                                 style: FontTheme.semiBold12.copyWith(
                                   color: ColorTheme.darkGray,
                                 ),
@@ -140,7 +139,7 @@ class _BookDetailsPageState extends State<BookDetailsPage> {
               return CustomErrorWidget(
                 message: message,
                 onRetry: () {
-                  final worksKey = widget.book.key;
+                  final worksKey = book.key;
                   context.read<BookDetailsBloc>().add(
                     BookDetailsEvent.fetchBookDetails(worksKey: worksKey),
                   );

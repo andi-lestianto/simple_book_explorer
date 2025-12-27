@@ -139,9 +139,9 @@ class $AssetsIconsGen {
   SvgGenImage get shoppingCartBulk =>
       const SvgGenImage('assets/icons/shopping-cart-bulk.svg');
 
-  /// File path: assets/icons/shopping-cart.svg
-  SvgGenImage get shoppingCart =>
-      const SvgGenImage('assets/icons/shopping-cart.svg');
+  /// File path: assets/icons/shopping-cart-linear.svg
+  SvgGenImage get shoppingCartLinear =>
+      const SvgGenImage('assets/icons/shopping-cart-linear.svg');
 
   /// File path: assets/icons/star.svg
   SvgGenImage get star => const SvgGenImage('assets/icons/star.svg');
@@ -160,7 +160,7 @@ class $AssetsIconsGen {
     searchNormalLinear,
     searchNormalBulk,
     shoppingCartBulk,
-    shoppingCart,
+    shoppingCartLinear,
     star,
   ];
 }

@@ -33,6 +33,8 @@ import 'package:simple_book_explorer/features/home/domain/usecase/get_books_usec
     as _i638;
 import 'package:simple_book_explorer/features/home/presentation/bloc/home_bloc.dart'
     as _i672;
+import 'package:simple_book_explorer/features/mainwrapper/presentation/cubit/mainwrapper_cubit.dart'
+    as _i388;
 
 const String _dev = 'dev';
 const String _prod = 'prod';
@@ -45,6 +47,7 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final networkModule = _$NetworkModule();
+    gh.factory<_i388.MainwrapperCubit>(() => _i388.MainwrapperCubit());
     gh.factory<String>(
       () => networkModule.baseUrl,
       instanceName: 'baseUrl',

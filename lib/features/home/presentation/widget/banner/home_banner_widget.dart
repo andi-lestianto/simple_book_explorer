@@ -95,8 +95,8 @@ class _HomeBannerWidgetState extends State<HomeBannerWidget> {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: currentIndex == index
-                        ? const Color(0xFF6200EE)
-                        : const Color(0xFFCCCCCC),
+                        ? ColorTheme.primaryBlue
+                        : ColorTheme.lightGray,
                   ),
                 ),
               ),
