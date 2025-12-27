@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:simple_book_explorer/core/widgets/circle_button_widget.dart';
 import 'package:simple_book_explorer/gen/assets.gen.dart';
 import 'package:simple_book_explorer/theme/color_theme.dart';
 import 'package:simple_book_explorer/theme/font_theme.dart';
@@ -10,7 +11,7 @@ class HomeHeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(16.w, 48.h, 16.w, 0.w),
+      padding: EdgeInsets.fromLTRB(16.w, 24.h, 16.w, 0.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -41,21 +42,7 @@ class HomeHeaderWidget extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            width: 40.w,
-            height: 40.w,
-            decoration: BoxDecoration(
-              color: ColorTheme.white,
-              borderRadius: .circular(100.r),
-              border: Border.all(color: ColorTheme.lightGray, width: 1.w),
-            ),
-            child: Center(
-              child: Assets.icons.notificationLinear.svg(
-                width: 16.w,
-                height: 16.w,
-              ),
-            ),
-          ),
+          CustomCircleButton(icon: Assets.icons.notificationLinear),
         ],
       ),
     );

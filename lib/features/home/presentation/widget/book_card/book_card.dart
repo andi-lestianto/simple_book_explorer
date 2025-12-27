@@ -15,10 +15,7 @@ class BookCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.pushNamed(
-          RouteNames.bookDetails,
-          pathParameters: {'worksKey': book.key},
-        );
+        context.pushNamed(RouteNames.bookDetails, extra: book);
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -6,6 +6,7 @@ class ColorTheme {
   static const Color secondaryBlue = Color(0xFFD7EDFF);
   static const Color darkGray = Color(0xFF66626C);
   static const Color lightGray = Color(0xFFD9D9D9);
+  static const Color veryLightGray = Color(0xFFF7F7F7);
   static const Color orange = Color(0xFFFF6C02);
   static const Color primaryBlack = Color(0xFF1E1E1E);
   static const Color white = Color(0xFFFFFFFF);

@@ -92,9 +92,9 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/arrow-left-linear.png
-  AssetGenImage get arrowLeftLinear =>
-      const AssetGenImage('assets/icons/arrow-left-linear.png');
+  /// File path: assets/icons/arrow-left-linear.svg
+  SvgGenImage get arrowLeftLinear =>
+      const SvgGenImage('assets/icons/arrow-left-linear.svg');
 
   /// File path: assets/icons/heart-linear.svg
   SvgGenImage get heartLinear =>
@@ -143,6 +143,9 @@ class $AssetsIconsGen {
   SvgGenImage get shoppingCart =>
       const SvgGenImage('assets/icons/shopping-cart.svg');
 
+  /// File path: assets/icons/star.svg
+  SvgGenImage get star => const SvgGenImage('assets/icons/star.svg');
+
   /// List of all assets
   List<dynamic> get values => [
     arrowLeftLinear,
@@ -158,6 +161,7 @@ class $AssetsIconsGen {
     searchNormalBulk,
     shoppingCartBulk,
     shoppingCart,
+    star,
   ];
 }
 
