@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:simple_book_explorer/core/di/injection.dart';
 import 'package:simple_book_explorer/routes/app_router.dart';
 
@@ -13,10 +14,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      routerConfig: appRouter,
+    return ScreenUtilInit(
+      designSize: const Size(360, 800),
+      child: MaterialApp.router(
+        title: 'Flutter Demo',
+        theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+        routerConfig: appRouter,
+      ),
     );
   }
 }

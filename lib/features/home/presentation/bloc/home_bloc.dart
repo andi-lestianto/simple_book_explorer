@@ -14,6 +14,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final GetBooksUsecase _getBooksUsecase;
 
   int _limit = 10;
+
   HomeBloc(this._getBooksUsecase) : super(_Loading()) {
     on<HomeEvent>((event, emit) async {
       await event.when(
