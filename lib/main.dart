@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(360, 800),
       child: MaterialApp.router(
-        title: 'Flutter Demo',
+        title: 'Simple Book Explorer',
         theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
         routerConfig: appRouter,
       ),
