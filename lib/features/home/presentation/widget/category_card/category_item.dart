@@ -5,7 +5,7 @@ class CategoryItem {
   CategoryItem({required this.id, required this.title});
 
   static List<CategoryItem> categories = [
-    CategoryItem(id: 1, title: "All"),
+    CategoryItem(id: 1, title: "Love"),
     CategoryItem(id: 2, title: "Science"),
     CategoryItem(id: 3, title: "History"),
     CategoryItem(id: 4, title: "Biography"),
