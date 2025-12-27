@@ -40,6 +40,7 @@ dev_dependencies:
   freezed: ^3.2.3
   injectable_generator: ^2.9.1
   json_serializable: ^6.11.2
+  flutter_launcher_icons: "^0.14.4"
 
 flutter:
   uses-material-design: true
@@ -49,6 +50,7 @@ flutter:
     - assets/fonts/
     - assets/icons/
     - assets/lottie/
+    - assets/appicon/
 
   fonts:
     - family: Plus Jakarta Sans
@@ -102,3 +104,21 @@ flutter_gen:
   integrations:
     flutter_svg: true
     lottie: true
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/appicon/book_icon.jpg"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/appicon/book_icon.jpg"
+    background_color: "#ffffff"
+    theme_color: "#ffffff"
+  windows:
+    generate: true
+    image_path: "assets/appicon/book_icon.jpg"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/appicon/book_icon.jpg"
